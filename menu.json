@@ -6,7 +6,11 @@
         },
         {
             "id": 2,
-            "name": "bayam"
+            "name": "Bayam"
+        },
+        {
+            "id": 3,
+            "name": "Ayam"
         }
     ]
 }
