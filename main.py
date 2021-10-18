@@ -16,13 +16,8 @@ SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-users_db = {
-    "asdf": {
-        "username": "asdf",
-        "hashed_password": "$2b$12$gTYEkYEbyEtVuNbZ4PjIbeWGnSh/H1eBO/MUYIrlAiGACOxC4Kcp6",
-        "disabled": False,
-    }
-}
+with open("users.json", "r") as read_file: 
+    users_db = json.load(read_file)
 class Token(BaseModel):
     access_token: str
     token_type: str
